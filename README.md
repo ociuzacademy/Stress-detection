@@ -15,4 +15,5 @@
 *  Python libraries required can be found in the requirements.txt file.
 * Install all the libraries needed.
 * run the app.py to open the webapp, do the test, etc.
+* Default admin username and password are 'adm' and '123' respectively. 
 * The chatbot developed in latest Gemini might not be available in local system, to get the chatbot running, upload the webapp folder to goole drive and run the "app,ipynb" in Google Colab.
