@@ -1,0 +1,7 @@
+Patient Name: Hari Krishnan
+Gender: Male
+Phone: 95673 12745
+Appointment Date: 2025-02-21
+Doctor: Dr. Basil Jose, Daya General Hospital Thrissur
+Appointment Time: 9:00 AM
+========================================
