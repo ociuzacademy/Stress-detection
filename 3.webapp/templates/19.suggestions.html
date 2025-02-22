@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+  <title>Mentally</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="../static/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Additional CSS Files -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+  <link rel="stylesheet" href="../static/css/templatemo-chain-app-dev.css">
+  <link rel="stylesheet" href="../static/css/animated.css">
+  <link rel="stylesheet" href="../static/css/owl.css">
+
+  <style>
+    body {
+      background-image: url('../static/images/bg.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: #ffffff;
+    }
+
+    .content-container {
+      max-width: 900px;
+      margin: 50px auto;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.85);
+      border-radius: 10px;
+      color: black;
+      text-align: center;
+    }
+
+    .multi-paragraph {
+      text-align: justify;
+      line-height: 1.8;
+      padding: 0 20px;
+      font-size: 1.2rem;
+      color: black;
+    }
+
+    .center-buttons {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-top: 30px;
+    }
+
+    .center-buttons .btn {
+      margin: 10px;
+      width: 220px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      border-radius: 30px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+      transition: all 0.3s ease;
+    }
+
+    .center-buttons .btn:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="header-area header-sticky">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <nav class="main-nav">
+            <a href="index.html" class="logo">
+              <img src="../static/images/logo.png" alt="Mentally">
+            </a>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container content-container">
+    <h1 style="color: #38bbf7;">Suggestions for a Healthy Mind</h1>
+    </br>
+</br>
+    <h2>1. Daily Mental Wellness Practices</h2>
+    <div class="multi-paragraph">
+      <ul>
+        <li><strong>Practice Gratitude:</strong> Reflect on things you are grateful for each day.</li>
+        <li><strong>Stay Present:</strong> Engage in mindfulness or meditation.</li>
+        <li><strong>Limit Screen Time:</strong> Reduce exposure to negative news and social media.</li>
+        <li><strong>Get Enough Sleep:</strong> Aim for 7-9 hours of quality sleep.</li>
+      </ul>
+    </div>
+
+    <h2>2. Building Positive Habits</h2>
+    <div class="multi-paragraph">
+      <ul>
+        <li><strong>Stay Active:</strong> Exercise to boost mood.</li>
+        <li><strong>Eat a Balanced Diet:</strong> Consume nutrient-rich foods.</li>
+        <li><strong>Stay Hydrated:</strong> Drink enough water for better focus.</li>
+        <li><strong>Manage Stress:</strong> Practice relaxation techniques.</li>
+      </ul>
+    </div>
+
+    <h2>3. Social & Emotional Well-being</h2>
+    <div class="multi-paragraph">
+      <ul>
+        <li><strong>Stay Connected:</strong> Maintain relationships with friends and family.</li>
+        <li><strong>Express Your Feelings:</strong> Talk openly about your emotions.</li>
+        <li><strong>Practice Self-Compassion:</strong> Be kind to yourself.</li>
+        <li><strong>Engage in Hobbies:</strong> Do activities that bring you joy.</li>
+      </ul>
+    </div>
+
+    <h2>4. Coping with Challenges</h2>
+    <div class="multi-paragraph">
+      <ul>
+        <li><strong>Take Breaks:</strong> Rest when needed.</li>
+        <li><strong>Seek Professional Help:</strong> Talk to a therapist if necessary.</li>
+        <li><strong>Set Realistic Goals:</strong> Break tasks into manageable steps.</li>
+        <li><strong>Develop a Routine:</strong> Structure your day.</li>
+      </ul>
+    </div>
+
+    <p><strong>Contact Us:</strong> mentally@gmail.com</p>
+    <p>&copy; 2024 Mentally</p>
+
+    <div class="center-buttons">
+      <form action="{{ url_for('home3')}}" method="post">
+        <button class="btn btn-primary">Home</button>
+      </form>
+      <form action="{{ url_for('landing2')}}" method="post">
+        <button class="btn btn-danger">Exit</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="../static/jquery/jquery.min.js"></script>
+  <script src="../static/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../static/js/owl-carousel.js"></script>
+  <script src="../static/js/animation.js"></script>
+  <script src="../static/js/imagesloaded.js"></script>
+  <script src="../static/js/popup.js"></script>
+  <script src="../static/js/custom.js"></script>
+
+</body>
+</html>
+

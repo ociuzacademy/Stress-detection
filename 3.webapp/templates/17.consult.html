@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+  <title>Mentally</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="../static/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Additional CSS Files -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <link rel="stylesheet" href="../static/css/templatemo-chain-app-dev.css">
+  <link rel="stylesheet" href="../static/css/animated.css">
+  <link rel="stylesheet" href="../static/css/owl.css">
+
+  <style>
+    /* Full-page background image */
+    body {
+      background-image: url('../static/images/bg.jpg'); /* Replace with your image URL */
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: #ffffff;
+    }
+
+    /* Centering the buttons */
+    .center-buttons {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      position: relative;
+    }
+
+    /* Styling the buttons */
+    .center-buttons .btn {
+      margin: 1px;
+      width: 220px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      border-radius: 30px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+      transition: all 0.3s ease;
+    }
+
+    /* Button hover effect */
+    .center-buttons .btn:hover {
+      transform: scale(1.05);
+    }
+
+    /* Decorative shapes */
+    .decorative-circle {
+      width: 150px;
+      height: 150px;
+      background-color: rgba(255, 255, 255, 0.2);
+      border-radius: 50%;
+      position: absolute;
+      z-index: 1;
+      animation: float 5s infinite ease-in-out;
+    }
+
+    .circle1 {
+      top: 30%;
+      left: 25%;
+    }
+
+    .circle2 {
+      top: 50%;
+      right: 20%;
+    }
+
+    .circle3 {
+      bottom: 15%;
+      left: 15%;
+    }
+
+    /* Floating animation for circles */
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-20px); }
+      100% { transform: translateY(0px); }
+    }
+.multi-paragraph {
+  margin: 20px 0 !important;
+  text-align: justify !important;
+  line-height: 1.8 !important;
+  padding: 0 20px !important;
+  max-width: 1500px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  font-size: 1.2rem !important;
+  color: #f8f8f8 !important;
+  font-family: 'Roboto', sans-serif !important;
+}
+
+
+
+
+    .booking-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      background: rgba(0, 0, 0, 0.5);
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    h1 {
+      color: #38bbf7;
+      margin-bottom: 10px;
+      font-weight: 700;
+    }
+
+    p {
+      font-size: 18px;
+      color: #eaeaea;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .appointment-form {
+      max-width: 500px;
+      width: 100%;
+      background: #ffffff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .appointment-form input, .appointment-form select, .appointment-form button {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+
+    .appointment-form input:focus, .appointment-form select:focus {
+      outline: none;
+      border-color: #38bbf7;
+    }
+
+    .appointment-form button {
+      background-color: #38bbf7;
+      color: #ffffff;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .appointment-form button:hover {
+      background-color: #2a98c0;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ***** Preloader Start ***** -->
+  <div id="js-preloader" class="js-preloader">
+    <div class="preloader-inner">
+      <span class="dot"></span>
+      <div class="dots">
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+  <!-- ***** Preloader End ***** -->
+
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area header-sticky wow slideInDown" data-wow-duration="0.75s" data-wow-delay="0s">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <nav class="main-nav">
+            <a href="index.html" class="logo">
+              <img src="../static/images/logo.png" alt="Chain App Dev">
+            </a>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- ***** Header Area End ***** -->
+
+  <!-- Decorative circles for design -->
+  <div class="decorative-circle circle1"></div>
+  <div class="decorative-circle circle2"></div>
+  <div class="decorative-circle circle3"></div>
+
+  <!-- ***** Main Content Start ***** -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Main Booking Section -->
+  <div class="booking-container">
+    <h1>Book an Appointment</h1>
+    <p>Fill out the form below to schedule a meeting with the doctor.</p>
+
+    <form class="appointment-form" action="{{ url_for('confirm_appointment') }}" method="post">
+      <!-- Patient Name -->
+      <input type="text" name="patient_name" placeholder="Your Name" required>
+
+     
+
+<select name="gender" required>
+  <option value="">Gender</option>
+  <option value="Male">Male</option>
+  <option value="Female">Female</option>
+  <option value="Other">Other</option>
+</select>
+
+
+
+
+      <!-- Phone -->
+      <input type="tel" name="phone" placeholder="Your Phone Number" required>
+
+      <!-- Date -->
+      <input type="date" name="appointment_date" placeholder="Preferred Date" required>
+
+
+<!-- Time -->
+      <select name="doctor" required>
+        <option value="">Choose Doctor</option>
+        <option value="Dr. Albert James, Govt. Medical College, Thrissur">Dr. Albert James, Govt. Medical College, Thrissur</option>
+        <option value="Dr. Shaheer M, Amala Institute of Medical Sciences Thrissur">Dr. Shaheer M, Amala Institute of Medical Sciences Thrissur</option>
+        <option value="Dr. Basil Jose, Daya General Hospital Thrissur">Dr. Basil Jose, Daya General Hospital Thrissur</option>
+        <option value="Dr. Aneesha Rajan, Amala Institute of Medical Sciences Thrissur">Dr. Aneesha Rajan, Amala Institute of Medical Sciences Thrissur</option>
+        <option value="Dr. Shobha Jayaprakash, Daya General Hospital Thrissur">Dr. Shobha Jayaprakash, Daya General Hospital Thrissur</option>
+        <option value="Dr. Rahees Mohammed, Govt. Medical College, Thrissur">Dr. Rahees Mohammed, Govt. Medical College, Thrissur</option>
+      </select>
+
+
+      <!-- Time -->
+      <select name="appointment_time" required>
+        <option value="">Select Time Slot</option>
+        <option value="9:00 AM">9:00 AM</option>
+        <option value="10:00 AM">10:00 AM</option>
+        <option value="11:00 AM">11:00 AM</option>
+        <option value="2:00 PM">2:00 PM</option>
+        <option value="3:00 PM">3:00 PM</option>
+        <option value="4:00 PM">4:00 PM</option>
+      </select>
+
+
+
+
+
+<label style="display: flex; align-items: center; font-size: 14px; color: #333;">
+        <input type="checkbox" name="permission" required style="margin-right: 8px;">
+        I give permission to share my appointment details with the selected doctor.
+      </label>
+
+
+      <!-- Submit Button -->
+      <button type="submit">Book Appointment</button>
+    </form>
+
+</br>
+<!-- ***** Signup Button ***** -->
+<form action="{{ url_for('home3')}}" method="post">
+    <button id="startBtn" class="btn btn-primary btn-lg" style="border-radius: 50px;">Home</button>
+</form>
+
+
+   
+    
+  </div>
+  <!-- ***** Main Content End ***** -->
+
+
+
+
+  <!-- Scripts -->
+  <script src="../static/jquery/jquery.min.js"></script>
+  <script src="../static/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../static/js/owl-carousel.js"></script>
+  <script src="../static/js/animation.js"></script>
+  <script src="../static/js/imagesloaded.js"></script>
+  <script src="../static/js/popup.js"></script>
+  <script src="../static/js/custom.js"></script>
+</body>
+
+</html>
+

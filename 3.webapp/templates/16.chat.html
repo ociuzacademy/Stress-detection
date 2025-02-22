@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot Session</title>
+    <link rel="stylesheet" href="static/css/styles2.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Ask Your Mental Health Chatbot</h1>
+        <div id="chat-box">
+            <div id="chat-log"></div>
+            <form id="chat-form" autocomplete="off">
+                <input type="text" id="question" placeholder="Ask an economics question..." required>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </div>
+    <script>
+        document.getElementById('chat-form').addEventListener('submit', async function (e) {
+            e.preventDefault();
+            
+            const question = document.getElementById('question').value;
+            document.getElementById('chat-log').innerHTML += `<div class="user-message"><strong>You:</strong> ${question}</div>`;
+            document.getElementById('question').value = '';
+
+            try {
+                const response = await fetch('/ask', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                    body: new URLSearchParams({ question })
+                });
+                const data = await response.json();
+                document.getElementById('chat-log').innerHTML += `<div class="bot-message"><strong>Bot:</strong> ${data.answer}</div>`;
+            } catch (error) {
+                document.getElementById('chat-log').innerHTML += `<div class="bot-message"><strong>Bot:</strong> There was an error.</div>`;
+            }
+        });
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="shortcut icon" href="../static/favicon.png" type="image/x-icon" /> 
+    <title>Mentally</title>
+
+
+
+
+ <style>
+        body {
+            background: linear-gradient(to right, #b3e0ff, #80c1ff); /* Light blue gradient */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            box-sizing: border-box;
+        }
+
+        .container {
+            position: relative;
+            display: inline-block;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 900px; /* Ensure it doesn't exceed the viewport */
+            margin: 20px 0;
+        }
+
+        h1 {
+            color: #004080;
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            border-radius: 15px; /* Round the edges */
+        }
+
+        .sidebar-left, .sidebar-right {
+            width: 100%;
+            max-width: 300px;
+            background-color: #f0f8ff; /* Light background for analytics */
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, .1);
+            margin: 10px;
+        }
+
+        .sidebar-left h2, .sidebar-right h2 {
+            color: #004080;
+            margin-bottom: 10px;
+        }
+
+        .logo {
+            display: block;
+            margin: 0 auto 20px;
+            width: 150px; /* Adjust the width */
+            height: auto;
+        }
+
+        .dashboard {
+            height: auto;
+            background-color: #d0e7ff; /* Light blue for widgets */
+            border-radius: 10px;
+            margin-bottom: 20px;
+            padding: 10px;
+        }
+
+        .fps-display {
+            color: #004080;
+            font-size: 1.5em;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #004080;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        button:hover {
+            background-color: #0066cc;
+        }
+
+        @media (min-width: 600px) {
+            body {
+                flex-direction: row;
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+
+            .sidebar-left {
+                margin-right: 20px;
+            }
+
+            .sidebar-right {
+                margin-left: 20px;
+            }
+
+            .container {
+                width: calc(100% - 40px); /* Adjust width to fit with sidebars */
+            }
+        }
+    </style>
+
+
+
+
+    <script>
+        function updateFPS() {
+            fetch('/fps')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('fps').innerText = "FPS: " + data.fps.toFixed(2);
+                });
+        }
+
+       
+
+        setInterval(updateFPS, 50); // Update FPS every 50ms
+
+    </script>
+</head>
+
+<body>
+    <div class="sidebar-left">
+        <img src="../static/images/logo.png" alt="Logo" class="logo">
+        <h2>Tips & Suggestions</h2>
+        <div class="dashboard">
+            <p><b>Practice Mindfulness: </b></p>
+            <p>Spend a few minutes each day focusing on your breath or observing your thoughts without judgment to reduce stress and improve focus.</p>
+        </div>
+        <div class="dashboard">
+            <p><b>Stay Connected: </b></p>
+            <p>Reach out to friends, family, or support groups to share your feelings and maintain emotional well-being.</p>
+        </div>
+        <div class="dashboard">
+            <p><b>Get Active: </b></p>
+            <p>Regular physical activity, even a short walk, can boost your mood and energy levels.</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1>Mentally</h1>
+        <img src="{{ url_for('video_feed') }}" alt="Webcam Feed" />
+        <!-- <div class="overlay-text">DeepRehab</div> -->
+        
+    </div>
+
+ 
+
+
+<div class="sidebar-right">
+<h2 style="text-align: center;">Menu</h2>
+
+        <!-- Buttons -->
+
+<form action="{{ url_for('instruct')}}"method="post">
+<button>&#128196; Test</button>
+</form>
+            
+
+<form action="{{ url_for('suggestions')}}"method="post">
+<button>&#128209; Suggestions</button>
+</form>
+
+
+<form action="{{ url_for('consult2')}}"method="post">
+<button>&#128198; Booking</button>
+</form>
+
+<form action="{{ url_for('qna11')}}"method="post">
+        <button>&#128173; Q&A</button>
+</form>
+
+
+
+</div>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Mentally</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="../static/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+  <link rel="stylesheet" href="../static/css/templatemo-chain-app-dev.css">
+  <link rel="stylesheet" href="../static/css/animated.css">
+  <link rel="stylesheet" href="../static/css/owl.css">
+
+  <style>
+    body {
+      background-image: url('../static/images/bg.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: black;
+    }
+
+    .center-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+    }
+
+    .appointment-container {
+      background: rgba(255, 255, 255, 0.9);
+      padding: 20px;
+      border-radius: 10px;
+      width: 50%;
+      text-align: left;
+      color: black;
+      font-family: 'Arial', sans-serif;
+      margin-bottom: 20px;
+    }
+
+    .appointment-container p {
+      margin: 5px 0;
+      font-size: 1.2rem;
+    }
+
+    .btn-container {
+      margin-top: 20px;
+    }
+
+    .btn {
+      width: 150px;
+      font-size: 1.1rem;
+      margin: 5px;
+    }
+
+    /* Rounded Exit Button */
+    .btn-danger {
+      border-radius: 30px;
+      padding: 10px 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="center-content">
+    <h1 style="color: #38bbf7; font-size: 32px;">Done</h1>
+
+    <!-- Display Appointments -->
+    {% if appointments %}
+      {% for appointment in appointments %}
+        <div class="appointment-container">
+          {% for line in appointment.split("\n") %}
+            <p>{{ line }}</p>
+          {% endfor %}
+        </div>
+      {% endfor %}
+    {% else %}
+      <p>No appointments found.</p>
+    {% endif %}
+
+    <!-- Buttons -->
+    <div class="btn-container">
+        <!--  <form action="{{ url_for('home3')}}" method="post">
+        <button class="btn btn-primary">Home</button>
+      </form>   -->
+
+      <form action="{{ url_for('landing2')}}" method="post">
+        <button class="btn btn-danger">Exit</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="../static/jquery/jquery.min.js"></script>
+  <script src="../static/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../static/js/owl-carousel.js"></script>
+  <script src="../static/js/animation.js"></script>
+  <script src="../static/js/imagesloaded.js"></script>
+  <script src="../static/js/popup.js"></script>
+  <script src="../static/js/custom.js"></script>
+
+</body>
+</html>
+
